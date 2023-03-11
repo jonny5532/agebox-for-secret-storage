@@ -69,6 +69,9 @@ sys.stdout.write(
 showpage
 %%EOF
 """)
+sys.stdout.write("\x04") #EOF char
+#sys.stdout.write("\x1b%-12345X") # "PJL Universal Exit"
+sys.stdout.flush()
 
 open("public_keys.out", "a").write(public_key)
 
